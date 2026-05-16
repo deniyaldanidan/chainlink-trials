@@ -6,8 +6,8 @@ src = "src"
 remappings = [
   '@openzeppelin/contracts=lib/openzeppelin-contracts/contracts',
   "forge-std=lib/forge-std/src",
-  "@chainlink/contracts=lib/chainlink-brownie-contracts/contracts/",
-  "@chainlink/local/=lib/chainlink-local/",
+  "@chainlink/contracts=lib/chainlink-brownie-contracts/contracts",
+  "@chainlink/local=lib/chainlink-local",
 ]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
