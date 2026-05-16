@@ -4,7 +4,7 @@ pragma solidity ^0.8.19;
 import {MyToken} from "../utils/MyToken.sol";
 import {
     AggregatorV3Interface
-} from "@chainlink/contracts/v0.8/shared/interfaces/AggregatorV3Interface.sol";
+} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 
 // - TokenShop will mint tokens (x amount of tokens == worth of Eth/USD) to users for the Eth they pay.
 

@@ -3,7 +3,7 @@ pragma solidity ^0.8.19;
 
 import {
     AutomationCompatibleInterface
-} from "@chainlink/contracts/v0.8/automation/AutomationCompatible.sol";
+} from "@chainlink/contracts/src/v0.8/automation/AutomationCompatible.sol";
 
 contract Donator is AutomationCompatibleInterface {
     address private owner;

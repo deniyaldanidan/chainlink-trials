@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import {Client} from "@chainlink/contracts/v0.8/ccip/libraries/Client.sol";
+import {Client} from "@chainlink/contracts/src/v0.8/ccip/libraries/Client.sol";
 import {
     CCIPReceiver
-} from "@chainlink/contracts/v0.8/ccip/applications/CCIPReceiver.sol";
+} from "@chainlink/contracts/src/v0.8/ccip/applications/CCIPReceiver.sol";
 
 /**
  * THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY.

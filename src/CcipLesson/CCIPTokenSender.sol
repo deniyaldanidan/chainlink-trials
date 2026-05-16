@@ -5,8 +5,8 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {
     IRouterClient
-} from "@chainlink/contracts/v0.8/ccip/interfaces/IRouterClient.sol";
-import {Client} from "@chainlink/contracts/v0.8/ccip/libraries/Client.sol";
+} from "@chainlink/contracts/src/v0.8/ccip/interfaces/IRouterClient.sol";
+import {Client} from "@chainlink/contracts/src/v0.8/ccip/libraries/Client.sol";
 import {
     SafeERC20
 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
