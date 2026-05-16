@@ -13,6 +13,7 @@ contract TokenShopTest is Test {
         0x694AA1769357215DE4FAC081bf1f309aDC325306;
 
     address owner = makeAddr("owner");
+    address user = makeAddr("user");
 
     function setUp() external {
         myToken = new MyToken(owner, owner);
@@ -24,10 +25,32 @@ contract TokenShopTest is Test {
             address(tokenShop) == myToken.getMinter(),
             "Minter change not succeeded"
         );
+        vm.deal(user, 1 ether);
     }
 
     function testDoesPriceFeedWorks() external view {
-        uint256 priceOf1Eth = tokenShop.getPriceOf1ETHinUSD();
+        uint256 priceOf1Eth = tokenShop.getAmountOfTokensToMintFor1Eth();
         console2.log(priceOf1Eth);
+    }
+
+    function testGetAmountOfTokenToMintForGivenEth() external view {
+        console2.log(tokenShop.getAmountOfTokensToMintForGivenEth(0.01 ether));
+    }
+
+    function testBuyTokens() external {
+        uint256 amountOfEthToPay = 0.01 ether;
+        uint256 mintableTokens = tokenShop.getAmountOfTokensToMintForGivenEth(
+            amountOfEthToPay
+        );
+        uint256 userInitialBalance = myToken.balanceOf(user);
+
+        vm.prank(user);
+        tokenShop.buyTokens{value: amountOfEthToPay}(mintableTokens, user);
+
+        uint256 userFinalBalance = myToken.balanceOf(user);
+
+        console2.log(mintableTokens, userInitialBalance + userFinalBalance);
+
+        assertEq(userInitialBalance + userFinalBalance, mintableTokens);
     }
 }
