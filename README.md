@@ -19,9 +19,11 @@ forge test --fork-url YOUR-ETH-SEPOLIA-RPC-URL -vvv
 	- [ ] Make an Transaction like Stake or Deposit on Destination Network (Token + Data Transfer)
 - [ ] Finish the remaining Chainlink-lessons
 
-> [!warning] This repo got some library-errors. So continue rest of the course in another repo
+> [!warning] 
+> This repo got some library-errors. So continue rest of the course in another repo
 
-> [!note] Maybe try Hardhat instead of Foundry
+> [!note] 
+> Maybe try Hardhat instead of Foundry
 
 > [!important]
 > chainlink-brownie-contracts is deprecated, [so refer here](https://github.com/smartcontractkit/chainlink-brownie-contracts)
@@ -36,4 +38,5 @@ forge test --fork-url YOUR-ETH-SEPOLIA-RPC-URL -vvv
 > - https://ccip.chain.link/
 
 
-> [!note] Also correct mappings in local vs-code's Path-Intellisense extension
+> [!note] 
+> Also correct mappings in local vs-code's Path-Intellisense extension
